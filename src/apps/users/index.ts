@@ -4,7 +4,7 @@ import {
   deleteUserHandler,
   getUserHandler,
   updateUserHandler,
-} from "@/apps/users/handlers";
+} from "./handlers";
 import validatorMiddleware from "@/libs/validatorMiddleware";
 import { createUserSchema } from "./models";
 

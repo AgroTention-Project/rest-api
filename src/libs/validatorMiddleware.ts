@@ -1,3 +1,4 @@
+import HttpError from "@/utils/error";
 import type { Handler, NextFunction, Request, Response } from "express";
 import { ZodError, type ZodType } from "zod";
 
@@ -18,9 +19,12 @@ const validatorMiddleware = <T>(schema: ZodType<T>): ValidationMiddleware => {
       next();
     } catch (e) {
       if (e instanceof ZodError) {
-        throw Error; // TODO Handle error
+        // TODO Better error message
+        const { issues } = e;
+        const { message } = issues[0];
+        throw new HttpError(message, 400);
       } else {
-        throw Error; // TODO Handle error
+        throw new HttpError("unhandeled client error", 500);
       }
     }
   };

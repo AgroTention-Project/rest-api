@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "bun run src/index.ts --watch",
-    "build": "bun build --minify --target node --outfile dist/app.js src/index.ts"
+    "build": "bun build --minify --target node --outfile dist/app.js src/index.ts",
+    "format": "prettier src/**/* -w",
+    "preview": "bun run build && bun run dist/app.js"
   },
   "devDependencies": {
     "@types/bun": "latest",

@@ -3,7 +3,7 @@ import { getPlantService } from "./services";
 
 export const getPlantHandler: Handler = async (
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<void> => {
   const { plantScientificName } = req.params;
 

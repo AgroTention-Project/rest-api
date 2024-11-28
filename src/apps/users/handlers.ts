@@ -9,7 +9,7 @@ import type { UserExtras } from "./models";
 
 export const createUserHandler: Handler = async (
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<void> => {
   const { userUid } = req.params;
   const data: UserExtras = req.body;
@@ -23,7 +23,7 @@ export const createUserHandler: Handler = async (
 
 export const updateUserHandler: Handler = async (
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<void> => {
   const { userUid } = req.params;
   const data: UserExtras = req.body;
@@ -38,7 +38,7 @@ export const updateUserHandler: Handler = async (
 
 export const getUserHandler: Handler = async (
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<void> => {
   const { userUid } = req.params;
 
@@ -54,7 +54,7 @@ export const getUserHandler: Handler = async (
 
 export const deleteUserHandler: Handler = async (
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<void> => {
   const { userUid } = req.params;
 

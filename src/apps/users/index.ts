@@ -12,7 +12,7 @@ const usersRouter: Router = Router();
 usersRouter.post(
   "/users/:userUid/extras",
   validatorMiddleware(createUserSchema),
-  createUserHandler
+  createUserHandler,
 );
 
 usersRouter.get("/users/:userUid/extras", getUserHandler);

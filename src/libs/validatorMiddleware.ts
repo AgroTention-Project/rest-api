@@ -10,7 +10,7 @@ const validatorMiddleware = <T>(schema: ZodType<T>): ValidationMiddleware => {
   return async (
     req: Request,
     _: Response,
-    next: NextFunction
+    next: NextFunction,
   ): Promise<void> => {
     const { body } = req;
     try {

@@ -3,7 +3,7 @@ import plantConnection from "./connection";
 import HttpError from "@/utils/error";
 
 export const getPlantService = async (
-  plantScientificName: string
+  plantScientificName: string,
 ): Promise<Plant> => {
   const doc = plantConnection.doc(plantScientificName);
   try {

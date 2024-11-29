@@ -1,5 +1,3 @@
-echo "building app..."
-bun run build > /dev/null
 
 #!/bin/bash
 
@@ -8,7 +6,8 @@ IMAGE_NAME="asia-southeast2-docker.pkg.dev/agrotention-project-441716/agrotentio
 
 bun i --production
 
-bun run build
+echo "building app..."
+bun run build > /dev/null
 
 # Build the Docker image
 docker build -t $IMAGE_NAME .

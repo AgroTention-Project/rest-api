@@ -10,8 +10,8 @@ const app: Application = express();
 
 app.use(appsErrorLogger);
 app.use(appsLogger);
-app.use(usersExtrasApp);
-app.use(platsApp);
+app.use("/", usersExtrasApp);
+app.use("/", platsApp);
 
 app.listen(APP_PORT, () => {
 	console.log(`App running on ${APP_PORT}.`);
